@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <% if current_user %>
+  Signed in as <%= current_user.first_name + ' ' + current_user.last_name %>!
+  <%= link_to "Sign out", signout_path %>
+</br>
+<% else %>
+<h1> Welcome, please login to continue </h1>
+<%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+<% end %>
+
     <%= yield %>
+
   </body>
 </html>

@@ -8,6 +8,6 @@ get 'auth/:provider/callback', to: 'sessions#create'
 get 'auth/failure', to: redirect('/') #where the user is redirected if they don't accept the requested permissions.
 get 'home', to: 'home#show'
 get 'me', to: 'me#show', as: 'me' #authenticated route that serves information specific to the current user
-
+get 'signout', to: 'sessions#destroy', as: 'signout'
 root to: "home#show"
 end
