@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_023218) do
+ActiveRecord::Schema.define(version: 2018_08_31_192509) do
 
-  create_table "foodtrucks", force: :cascade do |t|
+  create_table "food_trucks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 2018_08_20_023218) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "visits", force: :cascade do |t|
+    t.integer "food_truck_id"
+    t.datetime "arrival_time"
+    t.datetime "departure_time"
+    t.string "location"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_truck_id"], name: "index_visits_on_food_truck_id"
   end
 
 end

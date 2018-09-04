@@ -10,32 +10,32 @@ class FoodtrucksTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Foodtrucks"
   end
 
-  test "creating a Foodtruck" do
+  test "creating a FoodTruck" do
     visit foodtrucks_url
-    click_on "New Foodtruck"
+    click_on "New FoodTruck"
 
-    click_on "Create Foodtruck"
+    click_on "Create FoodTruck"
 
-    assert_text "Foodtruck was successfully created"
+    assert_text "FoodTruck was successfully created"
     click_on "Back"
   end
 
-  test "updating a Foodtruck" do
+  test "updating a FoodTruck" do
     visit foodtrucks_url
     click_on "Edit", match: :first
 
-    click_on "Update Foodtruck"
+    click_on "Update FoodTruck"
 
-    assert_text "Foodtruck was successfully updated"
+    assert_text "FoodTruck was successfully updated"
     click_on "Back"
   end
 
-  test "destroying a Foodtruck" do
+  test "destroying a FoodTruck" do
     visit foodtrucks_url
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
 
-    assert_text "Foodtruck was successfully destroyed"
+    assert_text "FoodTruck was successfully destroyed"
   end
 end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  food_truck: one
+  date: 2018-08-31 14:25:09
+  location: MyString
+  status: MyString
+
+two:
+  id: 
+  food_truck: two
+  date: 2018-08-31 14:25:09
+  location: MyString
+  status: MyString

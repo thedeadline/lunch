@@ -1,2 +1,0 @@
-class Foodtruck < ApplicationRecord
-end

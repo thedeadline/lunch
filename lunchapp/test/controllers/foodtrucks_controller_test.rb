@@ -16,11 +16,11 @@ class FoodtrucksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create foodtruck" do
-    assert_difference('Foodtruck.count') do
+    assert_difference('FoodTruck.count') do
       post foodtrucks_url, params: { foodtruck: {  } }
     end
 
-    assert_redirected_to foodtruck_url(Foodtruck.last)
+    assert_redirected_to foodtruck_url(FoodTruck.last)
   end
 
   test "should show foodtruck" do
@@ -39,7 +39,7 @@ class FoodtrucksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy foodtruck" do
-    assert_difference('Foodtruck.count', -1) do
+    assert_difference('FoodTruck.count', -1) do
       delete foodtruck_url(@foodtruck)
     end
 
