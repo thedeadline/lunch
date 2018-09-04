@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Foodtrucks</h1>
+<h1>Food Trucks</h1>
 
 <table>
   <thead>
@@ -10,11 +10,11 @@
   </thead>
 
   <tbody>
-    <% @foodtrucks.each do |foodtruck| %>
+    <% @foodtrucks.each do |food_truck| %>
       <tr>
-        <td><%= link_to 'Show', foodtruck %></td>
-        <td><%= link_to 'Edit', edit_foodtruck_path(foodtruck) %></td>
-        <td><%= link_to 'Destroy', foodtruck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', food_truck %></td>
+        <td><%= link_to 'Edit', edit_food_truck_path(food_truck) %></td>
+        <td><%= link_to 'Destroy', food_truck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New FoodTruck', new_foodtruck_path %>
+<%= link_to 'New Food Truck', new_food_truck_path %>

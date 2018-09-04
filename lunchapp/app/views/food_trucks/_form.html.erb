@@ -1,10 +1,10 @@
-<%= form_with(model: foodtruck, local: true) do |form| %>
-  <% if foodtruck.errors.any? %>
+<%= form_with(model: food_truck, local: true) do |form| %>
+  <% if food_truck.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(foodtruck.errors.count, "error") %> prohibited this foodtruck from being saved:</h2>
+      <h2><%= pluralize(food_truck.errors.count, "error") %> prohibited this food_truck from being saved:</h2>
 
       <ul>
-      <% foodtruck.errors.full_messages.each do |message| %>
+      <% food_truck.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

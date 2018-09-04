@@ -1,5 +1,5 @@
 class FoodTrucksController < ApplicationController
-  before_action :authenticate, :set_foodtruck, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, :set_food_truck, only: [:show, :edit, :update, :destroy]
 
   # GET /foodtrucks
   # GET /foodtrucks.json
@@ -24,7 +24,7 @@ class FoodTrucksController < ApplicationController
   # POST /foodtrucks
   # POST /foodtrucks.json
   def create
-    @foodtruck = FoodTruck.new(foodtruck_params)
+    @foodtruck = FoodTruck.new(food_truck_params)
 
     respond_to do |format|
       if @foodtruck.save
@@ -41,7 +41,7 @@ class FoodTrucksController < ApplicationController
   # PATCH/PUT /foodtrucks/1.json
   def update
     respond_to do |format|
-      if @foodtruck.update(foodtruck_params)
+      if @foodtruck.update(food_truck_params)
         format.html { redirect_to @foodtruck, notice: 'FoodTruck was successfully updated.' }
         format.json { render :show, status: :ok, location: @foodtruck }
       else
@@ -56,19 +56,19 @@ class FoodTrucksController < ApplicationController
   def destroy
     @foodtruck.destroy
     respond_to do |format|
-      format.html { redirect_to foodtrucks_url, notice: 'FoodTruck was successfully destroyed.' }
+      format.html { redirect_to food_trucks_url, notice: 'FoodTruck was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_foodtruck
+    def set_food_truck
       @foodtruck = FoodTruck.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def foodtruck_params
-      params.fetch(:foodtruck, {})
+    def food_truck_params
+      params.fetch(:food_truck, {})
     end
 end

@@ -1,1 +1,1 @@
-json.partial! "foodtrucks/foodtruck", foodtruck: @foodtruck
+json.partial! "food_trucks/food_truck", food_truck: @foodtruck

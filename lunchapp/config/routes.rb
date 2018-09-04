@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :food_trucks
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  resources :visits do
+    collection { post :import }
+  end
 get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
 get 'logout', to: 'sessions#destroy', as: 'logout'
 get 'auth/:provider/callback', to: 'sessions#create'
