@@ -1,6 +1,24 @@
-<h2>Import Calendar</h2>
-
-<%= form_tag import_products_path, multipart: true do %>
+<h2>Calendar</h2>
+<table id="visits">
+  <tr>
+    <th>Food_Truck</th>
+    <th>Arrival</th>
+    <th>Departure</th>
+    <th>Location</th>
+    <th>Status</th>
+  </tr>
+  <% console %>
+<% @visits.each do |visit| %>
+  <tr>
+    <td><%= visit.food_truck.name %></td>
+    <td><%= visit.arrival_time %></td>
+    <td><%= visit.departure_time %></td>
+    <td><%= visit.location %></td>
+    <td><%= visit.status %></td>
+  </tr>
+<% end %>
+</table>
+<%= form_tag import_visits_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>

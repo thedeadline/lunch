@@ -1,6 +1,10 @@
 class CreateFoodTrucks < ActiveRecord::Migration[5.2]
   def change
     create_table :food_trucks do |t|
+      t.string :name
+      t.string :address
+      t.string :phone
+      t.string :website
 
       t.timestamps
     end

@@ -69,6 +69,6 @@ class FoodTrucksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_truck_params
-      params.fetch(:food_truck, {})
+      params.fetch(:food_truck, :name, {})
     end
 end
